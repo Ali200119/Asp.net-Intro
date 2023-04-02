@@ -1,0 +1,45 @@
+﻿@model int[]
+@*@model Data*@
+
+@{
+    int number = 5 + 5;
+
+    List<string> names = new List<string> {"Cinare", "Ali", "Pervin", "Aqshin"};
+}
+
+<h1>Home page</h1>
+
+<section id="home">
+    <div class="navbar">
+        <h3 style="color: blue">Hello World!</h3>
+        <span>@number</span>
+
+        <ul>
+            @for (int i = 0; i < 5; i++)
+            {
+                @*<li>P135</li>*@
+                @*<li>@i</li>*@
+            }
+        </ul>
+
+        @foreach (var item in names)
+        {
+            <h1>@item</h1>
+        }
+
+        @foreach (var item in Model)
+        {
+            <h1>@item</h1>
+        }
+
+        @*@foreach (var item in Model.Nums1)
+        {
+            <h1>@item</h1>
+        }
+
+        @foreach (var item in Model.Nums2)
+        {
+            <h1>@item</h1>
+        }*@
+    </div>
+</section>

@@ -1,0 +1,7 @@
+﻿@model int[]
+
+@for (int i = 2; i < Model.Length; i++)
+    {
+        Model[i] = Model[i - 2] + Model[i - 1];
+        <h1>@Model[i]</h1>
+    }
